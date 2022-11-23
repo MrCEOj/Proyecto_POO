@@ -2,16 +2,46 @@ package main;
 
 public class MenuPrincipal extends javax.swing.JFrame {
 
-    int xMouse, yMouse;
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Fondo;               //Panel principal
+    private javax.swing.JPanel Title;               //Panel de cabecera, podemos arrastrarlo como si fuera jframe
+    private javax.swing.JPanel Opciones;            //Panel que contiene la lista de opciones
+    private javax.swing.JPanel PanelBienvenida;     //Panel que contiene texto de bienvenida
+    private javax.swing.JLabel Titulo;              //Texto de titulo
+    private javax.swing.JLabel Bienvenida;          //Texto de bienvenida
+
+    //Botones (en realidad son paneles, pero lucen mejor que los botones)
+    private javax.swing.JPanel Op1;             //Panel de opcion 1
+    private javax.swing.JPanel Op2;             //Panel de opcion 2
+    private javax.swing.JPanel Op3;             //Panel de opcion 3
+    private javax.swing.JPanel Op4;             //Panel de opcion 4
+    private javax.swing.JPanel Op5;             //Panel de opcion 5
+    private javax.swing.JPanel Op6;             //Panel de opcion 6
+    private javax.swing.JPanel Op7;             //Panel de opcion 7
+    private javax.swing.JPanel Op8;             //Panel de opcion 8
+    private javax.swing.JPanel Op9;             //Panel de opcion 9
+    private javax.swing.JPanel Op10;            //Panel de opcion 10
+
+    //Texto de las opciones
+    private javax.swing.JLabel jLabel1;         //Texto de opción 1
+    private javax.swing.JLabel jLabel4;         //Texto de opción 2
+    private javax.swing.JLabel jLabel5;         //Texto de opción 3
+    private javax.swing.JLabel jLabel6;         //Texto de opción 4
+    private javax.swing.JLabel jLabel7;         //Texto de opción 5
+    private javax.swing.JLabel jLabel8;         //Texto de opción 6
+    private javax.swing.JLabel jLabel9;         //Texto de opción 7
+    private javax.swing.JLabel jLabel10;        //Texto de opción 8
+    private javax.swing.JLabel jLabel11;        //Texto de opción 9
+    private javax.swing.JLabel jLabel12;        //Texto de opción 10
+
+    int xMouse, yMouse; //Variables que captan coordenadas del puntero
     
     public MenuPrincipal() {
-        initComponents();
+        initComponents(); //El constructor inicializa las variables de swing y les aplica atributos
     }
 
-    
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   
     private void initComponents() {
-
         Fondo = new javax.swing.JPanel();
         Opciones = new javax.swing.JPanel();
         Op1 = new javax.swing.JPanel();
@@ -34,7 +64,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         Op10 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        Cont_Opc = new javax.swing.JPanel();
+        PanelBienvenida = new javax.swing.JPanel();
         Bienvenida = new javax.swing.JLabel();
         Title = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
@@ -307,31 +337,31 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         Fondo.add(Opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 360, 490));
 
-        Cont_Opc.setBackground(new java.awt.Color(255, 255, 255));
-        Cont_Opc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PanelBienvenida.setBackground(new java.awt.Color(255, 255, 255));
+        PanelBienvenida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         Bienvenida.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         Bienvenida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Bienvenida.setText("Bienvenido al programa");
 
-        javax.swing.GroupLayout Cont_OpcLayout = new javax.swing.GroupLayout(Cont_Opc);
-        Cont_Opc.setLayout(Cont_OpcLayout);
-        Cont_OpcLayout.setHorizontalGroup(
-            Cont_OpcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Cont_OpcLayout.createSequentialGroup()
+        javax.swing.GroupLayout PanelBienvenidaLayout = new javax.swing.GroupLayout(PanelBienvenida);
+        PanelBienvenida.setLayout(PanelBienvenidaLayout);
+        PanelBienvenidaLayout.setHorizontalGroup(
+            PanelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBienvenidaLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addComponent(Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(66, Short.MAX_VALUE))
         );
-        Cont_OpcLayout.setVerticalGroup(
-            Cont_OpcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Cont_OpcLayout.createSequentialGroup()
+        PanelBienvenidaLayout.setVerticalGroup(
+            PanelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBienvenidaLayout.createSequentialGroup()
                 .addGap(135, 135, 135)
                 .addComponent(Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(162, Short.MAX_VALUE))
         );
 
-        Fondo.add(Cont_Opc, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 640, 490));
+        Fondo.add(PanelBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 640, 490));
 
         Title.setBackground(new java.awt.Color(102, 102, 102));
         Title.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -430,36 +460,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Bienvenida;
-    private javax.swing.JPanel Cont_Opc;
-    private javax.swing.JPanel Fondo;
-    private javax.swing.JPanel Op1;
-    private javax.swing.JPanel Op10;
-    private javax.swing.JPanel Op2;
-    private javax.swing.JPanel Op3;
-    private javax.swing.JPanel Op4;
-    private javax.swing.JPanel Op5;
-    private javax.swing.JPanel Op6;
-    private javax.swing.JPanel Op7;
-    private javax.swing.JPanel Op8;
-    private javax.swing.JPanel Op9;
-    private javax.swing.JPanel Opc1;
-    private javax.swing.JPanel Opc2;
-    private javax.swing.JPanel Opciones;
-    private javax.swing.JPanel Title;
-    private javax.swing.JLabel Titulo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    // End of variables declaration//GEN-END:variables
+    
 }
