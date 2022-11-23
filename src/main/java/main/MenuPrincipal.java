@@ -1,14 +1,15 @@
 package main;
-
+import java.awt.BorderLayout;
+import main.options.*;
+import javax.swing.*;
 public class MenuPrincipal extends javax.swing.JFrame {
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JPanel Fondo;               //Panel principal
     private javax.swing.JPanel Title;               //Panel de cabecera, podemos arrastrarlo como si fuera jframe
     private javax.swing.JPanel Opciones;            //Panel que contiene la lista de opciones
-    private javax.swing.JPanel PanelBienvenida;     //Panel que contiene texto de bienvenida
+    private javax.swing.JPanel Contenido;     //Panel que contiene texto de bienvenida
     private javax.swing.JLabel Titulo;              //Texto de titulo
-    private javax.swing.JLabel Bienvenida;          //Texto de bienvenida
 
     //Botones (en realidad son paneles, pero lucen mejor que los botones)
     private javax.swing.JPanel Op1;             //Panel de opcion 1
@@ -38,36 +39,48 @@ public class MenuPrincipal extends javax.swing.JFrame {
     
     public MenuPrincipal() {
         initComponents(); //El constructor inicializa las variables de swing y les aplica atributos
+        Cero p = new Cero();
+        show(p);
+    }
+    
+    private void show(JPanel u){
+        u.setSize(640,490);
+        u.setLocation(0,0);
+        
+        Contenido.removeAll();
+        Contenido.add(u,BorderLayout.CENTER);
+        Contenido.revalidate();
+        Contenido.repaint();
     }
 
    
     private void initComponents() {
-        Fondo = new javax.swing.JPanel();
+        //Declaracion de objetos swing
+        Fondo    = new javax.swing.JPanel();
         Opciones = new javax.swing.JPanel();
-        Op1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        Op2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        Op3 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        Op4 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        Op5 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        Op6 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        Op7 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        Op8 = new javax.swing.JPanel();
+        Op1      = new javax.swing.JPanel();
+        jLabel1  = new javax.swing.JLabel();
+        Op2      = new javax.swing.JPanel();
+        jLabel4  = new javax.swing.JLabel();
+        Op3      = new javax.swing.JPanel();
+        jLabel5  = new javax.swing.JLabel();
+        Op4      = new javax.swing.JPanel();
+        jLabel6  = new javax.swing.JLabel();
+        Op5      = new javax.swing.JPanel();
+        jLabel7  = new javax.swing.JLabel();
+        Op6      = new javax.swing.JPanel();
+        jLabel8  = new javax.swing.JLabel();
+        Op7      = new javax.swing.JPanel();
+        jLabel9  = new javax.swing.JLabel();
+        Op8      = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        Op9 = new javax.swing.JPanel();
+        Op9      = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        Op10 = new javax.swing.JPanel();
+        Op10     = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        PanelBienvenida = new javax.swing.JPanel();
-        Bienvenida = new javax.swing.JLabel();
-        Title = new javax.swing.JPanel();
-        Titulo = new javax.swing.JLabel();
+        Contenido = new javax.swing.JPanel();
+        Title    = new javax.swing.JPanel();
+        Titulo   = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -88,6 +101,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Generar arreglo numerico aleatorio");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op1Layout = new javax.swing.GroupLayout(Op1);
         Op1.setLayout(Op1Layout);
@@ -109,6 +127,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Generar arreglo numerico con datos solicitados");
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+
 
         javax.swing.GroupLayout Op2Layout = new javax.swing.GroupLayout(Op2);
         Op2.setLayout(Op2Layout);
@@ -130,6 +154,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Generar arreglo de cadenas con datos solicitados");
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op3Layout = new javax.swing.GroupLayout(Op3);
         Op3.setLayout(Op3Layout);
@@ -151,6 +180,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Generar arreglo de objetos con datos solicitados");
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op4Layout = new javax.swing.GroupLayout(Op4);
         Op4.setLayout(Op4Layout);
@@ -172,6 +206,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Mostrar elementos del arreglo");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op5Layout = new javax.swing.GroupLayout(Op5);
         Op5.setLayout(Op5Layout);
@@ -193,6 +232,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Ordenar arreglo");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op6Layout = new javax.swing.GroupLayout(Op6);
         Op6.setLayout(Op6Layout);
@@ -214,6 +258,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Buscar elemento en arreglo");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op7Layout = new javax.swing.GroupLayout(Op7);
         Op7.setLayout(Op7Layout);
@@ -235,6 +284,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Escribir contenido de arreglo en archivo");
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op8Layout = new javax.swing.GroupLayout(Op8);
         Op8.setLayout(Op8Layout);
@@ -256,6 +310,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Leer contenido del archivo");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Op9Layout = new javax.swing.GroupLayout(Op9);
         Op9.setLayout(Op9Layout);
@@ -337,31 +396,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         Fondo.add(Opciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 360, 490));
 
-        PanelBienvenida.setBackground(new java.awt.Color(255, 255, 255));
-        PanelBienvenida.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Contenido.setBackground(new java.awt.Color(255, 255, 255));
+        Contenido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Bienvenida.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
-        Bienvenida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Bienvenida.setText("Bienvenido al programa");
 
-        javax.swing.GroupLayout PanelBienvenidaLayout = new javax.swing.GroupLayout(PanelBienvenida);
-        PanelBienvenida.setLayout(PanelBienvenidaLayout);
-        PanelBienvenidaLayout.setHorizontalGroup(
-            PanelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBienvenidaLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
-        );
-        PanelBienvenidaLayout.setVerticalGroup(
-            PanelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBienvenidaLayout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addComponent(Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(162, Short.MAX_VALUE))
-        );
+        
 
-        Fondo.add(PanelBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 640, 490));
+        Fondo.add(Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 640, 490));
 
         Title.setBackground(new java.awt.Color(102, 102, 102));
         Title.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -408,7 +449,53 @@ public class MenuPrincipal extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Uno p = new Uno();
+        show(p);
+    }
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Dos p = new Dos();
+        show(p);
+    }
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Tres p = new Tres();
+        show(p);
+    }
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Cuatro p = new Cuatro();
+        show(p);
+    }
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Cinco p = new Cinco();
+        show(p);
+    }
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Seis p = new Seis();
+        show(p);
+    }
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Siete p = new Siete();
+        show(p);
+    }
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Ocho p = new Ocho();
+        show(p);
+    }
+    
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Nueve p = new Nueve();
+        show(p);
+    }
+
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         System.exit(0);

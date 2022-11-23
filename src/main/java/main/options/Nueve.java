@@ -1,8 +1,8 @@
 package main.options;
 
-public class Uno extends javax.swing.JPanel {
+public class Nueve extends javax.swing.JPanel {
 
-    public Uno() {
+    public Nueve() {
         initComponents();
     }
 
@@ -15,7 +15,7 @@ public class Uno extends javax.swing.JPanel {
 
         Content.setPreferredSize(new java.awt.Dimension(640, 490));
 
-        Placeholder.setText("Opcion 1");
+        Placeholder.setText("Opcion 9");
 
         javax.swing.GroupLayout ContentLayout = new javax.swing.GroupLayout(Content);
         Content.setLayout(ContentLayout);
@@ -48,7 +48,7 @@ public class Uno extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
