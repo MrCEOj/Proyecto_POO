@@ -3,7 +3,7 @@ package com.Menu;
 
 /**
  *
- * @author radam Y MARCE CLARO QUE SI
+ * @author radam Y MARCE CLARO QUE SI, Y TAMBIEN DIEGO COMO DE QUE NO
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
