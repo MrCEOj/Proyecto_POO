@@ -56,7 +56,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Opciones.setBackground(new java.awt.Color(153, 153, 153));
         Opciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Op1.setBackground(new java.awt.Color(204, 204, 204));
+        Op1.setBackground(new java.awt.Color(148, 25, 25));
         Op1.setForeground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 204));
