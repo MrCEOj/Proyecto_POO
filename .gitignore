@@ -17,3 +17,7 @@ target/ProyectoPOO-1.0-SNAPSHOT.jar
 >>>>>>> ff13561a72ab99060d25e0c7f45f88aa52c3f29b
 target/classes/.netbeans_automatic_build
 target/test-classes/.netbeans_automatic_build
+src/main/java/com/Menu/MenuPrincipal.form
+src/main/java/com/Menu/MenuPrincipal.java
+target/classes/com/Menu/MenuPrincipal$1.class
+target/classes/com/Menu/MenuPrincipal.class
