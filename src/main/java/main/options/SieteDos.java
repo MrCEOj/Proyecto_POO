@@ -2,8 +2,6 @@ package main.options;
 import javax.swing.JOptionPane;
 
 public class SieteDos extends javax.swing.JPanel {
-
-    Uno b = new Uno();
     
     public SieteDos() {
         initComponents();
@@ -17,30 +15,38 @@ public class SieteDos extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        numeroBuscar = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        numeroBuscar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("BUSCAR EN");
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("ARREGLO NUMÉRICO");
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Ingrese el número ");
+
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("que desea buscar ");
 
         numeroBuscar.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
         numeroBuscar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         numeroBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         numeroBuscar.setMinimumSize(new java.awt.Dimension(200, 41));
         numeroBuscar.setPreferredSize(new java.awt.Dimension(50, 30));
-
-        jLabel4.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
-        jLabel4.setText("que desea buscar ");
 
         jButton1.setBackground(new java.awt.Color(171, 86, 80));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
@@ -115,7 +121,7 @@ public class SieteDos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int numero = 0, pos=-1;
+        int numero, pos=-1;
         numero = Integer.parseInt(numeroBuscar.getText());
         for(int x=0; x<Uno.cant; x++){
             if(numero == Uno.num[x])

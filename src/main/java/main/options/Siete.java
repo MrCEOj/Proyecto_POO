@@ -34,13 +34,19 @@ public class Siete extends javax.swing.JPanel {
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("BUSCAR ELEMENTO EN");
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("EL ARREGLO");
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Seleccione el arreglo donde se buscara");
 
         jButton1.setBackground(new java.awt.Color(171, 86, 80));
@@ -122,12 +128,18 @@ public class Siete extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         SieteDos p = new SieteDos();
-        show(p);
+        if(Uno.cant > 0)
+            show(p);
+        else
+            JOptionPane.showMessageDialog(null,"El arreglo de números está vacío","Error",0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         SieteTres p = new SieteTres();
-        show(p);
+        if(Tres.cant > 0)
+            show(p);
+        else
+            JOptionPane.showMessageDialog(null,"El arreglo de cadenas está vacío","Error",0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

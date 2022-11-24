@@ -4,6 +4,8 @@
  */
 package main.options;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author radam
@@ -30,25 +32,31 @@ public class SieteTres extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        textobuscar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("BUSCAR EN");
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("ARREGLO DE CADENAS");
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Ingrese la cadena a buscar ");
 
-        jTextField1.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTextField1.setMinimumSize(new java.awt.Dimension(200, 41));
-        jTextField1.setPreferredSize(new java.awt.Dimension(50, 30));
+        textobuscar.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
+        textobuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        textobuscar.setMinimumSize(new java.awt.Dimension(200, 41));
+        textobuscar.setPreferredSize(new java.awt.Dimension(50, 30));
 
         jButton1.setBackground(new java.awt.Color(171, 86, 80));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
@@ -78,7 +86,7 @@ public class SieteTres extends javax.swing.JPanel {
                         .addComponent(jLabel3)
                         .addGap(165, 165, 165))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContentLayout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textobuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(200, 200, 200))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContentLayout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -94,7 +102,7 @@ public class SieteTres extends javax.swing.JPanel {
                 .addGap(33, 33, 33)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textobuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(260, Short.MAX_VALUE))
@@ -117,7 +125,16 @@ public class SieteTres extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        int pos=-1;
+        String str = textobuscar.getText();
+        for(int x=0; x<Tres.cant; x++){
+            if(str.compareTo(Tres.str[x]) == 0)
+                pos=x;
+        }
+        if(pos==-1)
+            JOptionPane.showMessageDialog(null, "No se encontró la cadena");
+        else
+            JOptionPane.showMessageDialog(null, "La posición de la cadena es " + pos);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -127,6 +144,6 @@ public class SieteTres extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField textobuscar;
     // End of variables declaration//GEN-END:variables
 }
