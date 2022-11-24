@@ -21,8 +21,6 @@ public class Dos extends javax.swing.JPanel {
         Content = new javax.swing.JPanel();
         Placeholder = new java.awt.Label();
 
-        setPreferredSize(new java.awt.Dimension(640, 520));
-
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
         Placeholder.setText("Opcion 2");
