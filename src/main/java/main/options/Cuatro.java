@@ -1,7 +1,10 @@
 package main.options;
 
 public class Cuatro extends javax.swing.JPanel {
-
+    
+    public static String str[];
+    public static int cant2;
+    int i;
     public Cuatro() {
         initComponents();
     }
@@ -15,7 +18,8 @@ public class Cuatro extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        cants = new javax.swing.JComboBox<>();
+        But1 = new javax.swing.JButton();
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setForeground(new java.awt.Color(255, 245, 245));
@@ -33,10 +37,19 @@ public class Cuatro extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("ARREGLO DE OBJETOS");
 
-        jTextField1.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTextField1.setMinimumSize(new java.awt.Dimension(200, 41));
-        jTextField1.setPreferredSize(new java.awt.Dimension(50, 30));
+        cants.setBackground(new java.awt.Color(232, 161, 155));
+        cants.setForeground(new java.awt.Color(232, 161, 155));
+        cants.setModel(new javax.swing.DefaultComboBoxModel<>(new Integer[] { 1,2,3,4,5,6,7,8,9,10}));
+
+        But1.setBackground(new java.awt.Color(171, 86, 80));
+        But1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        But1.setForeground(new java.awt.Color(23, 18, 18));
+        But1.setText("Generar Array");
+        But1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                But1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ContentLayout = new javax.swing.GroupLayout(Content);
         Content.setLayout(ContentLayout);
@@ -52,10 +65,13 @@ public class Cuatro extends javax.swing.JPanel {
                                 .addGap(37, 37, 37)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(cants, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(ContentLayout.createSequentialGroup()
                         .addGap(133, 133, 133)
-                        .addComponent(jLabel4)))
+                        .addComponent(jLabel4))
+                    .addGroup(ContentLayout.createSequentialGroup()
+                        .addGap(257, 257, 257)
+                        .addComponent(But1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(117, Short.MAX_VALUE))
         );
         ContentLayout.setVerticalGroup(
@@ -68,8 +84,10 @@ public class Cuatro extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(388, Short.MAX_VALUE))
+                    .addComponent(cants, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(But1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(345, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -88,12 +106,22 @@ public class Cuatro extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void But1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_But1ActionPerformed
+        cant2 = (Integer)cants.getSelectedItem();
+        str = new String[cant2];
+        i = 0;
+        textoArray.setText("Ingrese la cadena #"+(i+1)+": ");
+        ArrayLabel.setText(getstar());
+        ArrayLabel.setHorizontalAlignment(JLabel.CENTER);
+    }//GEN-LAST:event_But1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton But1;
     private javax.swing.JPanel Content;
+    private javax.swing.JComboBox<Integer> cants;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
