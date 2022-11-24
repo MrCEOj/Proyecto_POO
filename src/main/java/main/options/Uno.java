@@ -1,14 +1,24 @@
 package main.options;
 
-import java.math.*;
 import javax.swing.JLabel;
 
 public class Uno extends javax.swing.JPanel {
+    public static int num[];
+    private static Integer cant = 0;
     public Uno() {
         initComponents();
     }
     
-    public int num[];
+    
+    private String getar(){
+        String s="[";
+        if(num.length > 0)
+            for(int i=0 ; i<num.length ; i++)
+                s+=num[i]+", ";
+        s+="]";
+        return s;
+    }
+    
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -50,7 +60,10 @@ public class Uno extends javax.swing.JPanel {
         ArrayLabel.setBackground(new java.awt.Color(0, 0, 0));
         ArrayLabel.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         ArrayLabel.setForeground(new java.awt.Color(0, 0, 0));
-        ArrayLabel.setText("[ ]");
+        if(cant > 0)
+            ArrayLabel.setText(getar());
+        else
+            ArrayLabel.setText("[ ]");
 
         cants.setBackground(new java.awt.Color(232, 161, 155));
         cants.setForeground(new java.awt.Color(232, 161, 155));
@@ -116,18 +129,14 @@ public class Uno extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Integer cant = (Integer)cants.getSelectedItem();
-        this.num = new int[cant];
-        String n = "[";
+        cant = (Integer)cants.getSelectedItem();
+        num = new int[cant];
         Double temp;
         for(int i=0 ; i<cant ; i++){
             temp = Math.random()*21;
             num[i] = temp.intValue();
-            n+=num[i]+", ";
         }
-        n+="]";
-        
-        ArrayLabel.setText(n);
+        ArrayLabel.setText(getar());
         ArrayLabel.setHorizontalAlignment(JLabel.CENTER);
     }//GEN-LAST:event_jButton1ActionPerformed
 
