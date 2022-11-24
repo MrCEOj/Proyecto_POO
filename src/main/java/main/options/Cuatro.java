@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Cuatro extends javax.swing.JPanel {
     
     public static Persona per[];
-    public static int cant3;
+    public static int cant;
     int i;
     public Cuatro() {
         initComponents();
@@ -203,8 +203,8 @@ public class Cuatro extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void But1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_But1ActionPerformed
-        cant3 = (Integer)cants.getSelectedItem();
-        per = new Persona[cant3];
+        cant = (Integer)cants.getSelectedItem();
+        per = new Persona[cant];
         i = 0;
         Registro.setText("Registro #1");
     }//GEN-LAST:event_But1ActionPerformed
@@ -223,12 +223,13 @@ public class Cuatro extends javax.swing.JPanel {
 
     private void sigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sigActionPerformed
         String no = nom.getText();
+        Registro.setText("Registro #"+(i+2));
         int edad = Integer.parseInt(age.getText());
         double h = Double.parseDouble(heigth.getText());
         per[i] = new Persona(no,edad,h);
-        if(i==cant3-2)
+        if(i==cant-2)
             sig.setText("Finalizar");
-        if(i==cant3-1){
+        if(i==cant-1){
             sig.setText(" ");
             sig.setOpaque(false);
             sig.setContentAreaFilled(false);
@@ -236,7 +237,10 @@ public class Cuatro extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"¡El array está lleno!");
         }
         i++;
-        Registro.setText("Registro #"+(i+1));
+        
+        
+        
+            
     }//GEN-LAST:event_sigActionPerformed
 
 

@@ -185,7 +185,19 @@ public class Seis extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        String aux;
+        for(int x=1; x<Tres.cant; x++){
+            for(int y=0; y<Tres.cant-1; y++){
+                if(Tres.str[y].compareTo(Tres.str[y+1]) > 0){
+                    aux=Tres.str[y];
+                    Tres.str[y]=Tres.str[y+1];
+                    Tres.str[y+1]=aux;
+                }
+            }
+        }
+        
+        ArrayLabel2.setText(Tres.getstar());
+        JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

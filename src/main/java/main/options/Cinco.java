@@ -1,10 +1,16 @@
 package main.options;
+import java.awt.GridLayout;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 public class Cinco extends javax.swing.JPanel {
     
-    Uno b = new Uno();
-
+    static int i;
     public Cinco() {
         initComponents();
     }
@@ -139,13 +145,81 @@ public class Cinco extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        JPanel pan = new JPanel();
+        pan.add(new JLabel("Contenido del arreglo: "));
+        pan.add(new JScrollPane(new JList(Tres.str)));
+        pan.setLayout(new BoxLayout(pan, BoxLayout.Y_AXIS));
+        if(Tres.cant > 0)
+            JOptionPane.showMessageDialog(null,pan,"Arreglo de cadenas.",-1,null);
+        else
+            JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        if(Cuatro.cant > 0){
+            i=0;
+            JPanel pan = new JPanel();
+            JPanel pan2 = new JPanel();
+            JButton ant = new JButton("Anterior");
+            JButton nex = new JButton("Siguiente");
+            JLabel c = new JLabel("Contenido del arreglo: ");
+            JLabel n = new JLabel("Nombre: "+Cuatro.per[i].getnom());
+            JLabel a = new JLabel("Edad: "+Cuatro.per[i].getage());
+            JLabel h = new JLabel("Altura: "+Cuatro.per[i].geth());
+            JLabel r = new JLabel("Registro #"+(i+1));
+            ant.setEnabled(false);
+            ant.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    i--;
+                    if(i == 0)
+                        ant.setEnabled(false);
+                    else
+                        ant.setEnabled(true);
+                    
+                    if(!nex.isEnabled())
+                        nex.setEnabled(true);
+                    r.setText("Registro #"+(i+1));
+                    n.setText("Nombre: "+Cuatro.per[i].getnom());
+                    a.setText("Edad: "+Cuatro.per[i].getage());
+                    h.setText("Altura: "+Cuatro.per[i].geth());
+                }
+            });
+            if(i<Cuatro.cant-1)
+                nex.setEnabled(true);
+            else
+                nex.setEnabled(false);
+            
+            nex.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    i++;
+                    if(i < Cuatro.cant-1)
+                        nex.setEnabled(true);
+                    else
+                       nex.setEnabled(false);
+                    
+                    if(!ant.isEnabled())
+                       ant.setEnabled(true);
+                    r.setText("Registro #"+(i+1));
+                    n.setText("Nombre: "+Cuatro.per[i].getnom());
+                    a.setText("Edad: "+Cuatro.per[i].getage());
+                    h.setText("Altura: "+Cuatro.per[i].geth());
+                }
+            });
+            pan2.add(ant);
+            pan2.add(nex);
+            pan2.setLayout(new GridLayout());
+            pan.add(c);
+            pan.add(r);
+            pan.add(n);
+            pan.add(a);
+            pan.add(h);
+            pan.add(pan2);
+            pan.setLayout(new BoxLayout(pan, BoxLayout.Y_AXIS));
+        
+            JOptionPane.showMessageDialog(null,pan,"Arreglo de objetos.",-1,null);
+        }else
+            JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
     }//GEN-LAST:event_jButton4ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Content;

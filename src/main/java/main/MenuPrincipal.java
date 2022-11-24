@@ -7,6 +7,7 @@ public class MenuPrincipal extends javax.swing.JFrame{
     int xMouse, yMouse; //Variables que captan coordenadas del puntero
     
     public MenuPrincipal() {
+        super("Proyecto de POO");
         initComponents(); //El constructor inicializa las variables de swing y les aplica atributos
         Cero p = new Cero();
         show(p);
@@ -55,7 +56,6 @@ public class MenuPrincipal extends javax.swing.JFrame{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Proyecto de POO");
         setLocationByPlatform(true);
-        setUndecorated(true);
         setResizable(false);
 
         Fondo.setBackground(new java.awt.Color(204, 204, 204));
