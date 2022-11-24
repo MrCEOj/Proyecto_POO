@@ -1,4 +1,7 @@
 package main.options;
+import java.awt.BorderLayout;
+import main.options.*;
+import javax.swing.*;
 
 public class Seis extends javax.swing.JPanel {
 
@@ -6,6 +9,15 @@ public class Seis extends javax.swing.JPanel {
         initComponents();
     }
 
+    private void show(JPanel u){
+        u.setSize(640,520);
+        u.setLocation(0,0);
+        
+        Content.removeAll();
+        Content.add(u,BorderLayout.CENTER);
+        Content.revalidate();
+        Content.repaint();
+    }
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -124,7 +136,8 @@ public class Seis extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        SeisDos p = new SeisDos();
+        show(p);
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

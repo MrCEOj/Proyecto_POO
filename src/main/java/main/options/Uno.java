@@ -21,11 +21,9 @@ public class Uno extends javax.swing.JPanel {
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Ingrese la cantidad de elementos que ");
 
         jLabel3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("contendrá el arreglo: ");
 
         jTextField1.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
@@ -34,13 +32,13 @@ public class Uno extends javax.swing.JPanel {
         jTextField1.setPreferredSize(new java.awt.Dimension(50, 30));
 
         jLabel4.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("ARREGLO ALEATORIO");
 
         jButton1.setBackground(new java.awt.Color(171, 86, 80));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(23, 18, 18));
         jButton1.setText("Generar array");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
