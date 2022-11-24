@@ -63,7 +63,6 @@ public class MenuPrincipal extends javax.swing.JFrame{
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Opciones.setBackground(new java.awt.Color(148, 25, 25));
-        Opciones.setBorder(null);
         Opciones.setForeground(new java.awt.Color(148, 25, 25));
         Opciones.setPreferredSize(new java.awt.Dimension(360, 520));
 
@@ -493,7 +492,6 @@ public class MenuPrincipal extends javax.swing.JFrame{
         Contenido.setPreferredSize(new java.awt.Dimension(640, 520));
 
         Bienvenida.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
-        Bienvenida.setForeground(new java.awt.Color(0, 0, 0));
         Bienvenida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Bienvenida.setText("Bienvenido al programa");
 
@@ -517,7 +515,6 @@ public class MenuPrincipal extends javax.swing.JFrame{
         Fondo.add(Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 640, 520));
 
         Title.setBackground(new java.awt.Color(102, 102, 102));
-        Title.setBorder(null);
 
         Titulo.setFont(new java.awt.Font("Franklin Gothic Heavy", 2, 24)); // NOI18N
         Titulo.setForeground(new java.awt.Color(255, 255, 255));

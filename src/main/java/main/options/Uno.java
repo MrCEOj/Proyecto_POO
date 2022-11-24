@@ -47,7 +47,7 @@ public class Uno extends javax.swing.JPanel {
         ArrayLabel.setBackground(new java.awt.Color(0, 0, 0));
         ArrayLabel.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         ArrayLabel.setForeground(new java.awt.Color(0, 0, 0));
-        ArrayLabel.setText("[]");
+        ArrayLabel.setText("[ ]");
 
         cants.setBackground(new java.awt.Color(232, 161, 155));
         cants.setForeground(new java.awt.Color(232, 161, 155));
