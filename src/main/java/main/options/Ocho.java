@@ -1,5 +1,6 @@
 package main.options;
 import java.io.*;
+import javax.swing.JOptionPane;
 
 public class Ocho extends javax.swing.JPanel {
     
@@ -9,7 +10,6 @@ public class Ocho extends javax.swing.JPanel {
         initComponents();
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -114,7 +114,24 @@ public class Ocho extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        
+        try {
+            String ruta = "./src/main/java/main/options\\respaldo_num.txt";
+            String contenido = Uno.getar();
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+            JOptionPane.showMessageDialog(null, "Archivo creado exitosamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Excepcion " + e);
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
