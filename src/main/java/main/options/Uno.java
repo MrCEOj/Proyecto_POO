@@ -35,14 +35,17 @@ public class Uno extends javax.swing.JPanel {
         Content.setForeground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Seleccione la cantidad de elementos que ");
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("contendrá el arreglo: ");
 
+        Title.setBackground(new java.awt.Color(0, 0, 0));
         Title.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
         Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("ARREGLO ALEATORIO");
@@ -63,7 +66,7 @@ public class Uno extends javax.swing.JPanel {
         if(cant > 0)
             ArrayLabel.setText(getar());
         else
-            ArrayLabel.setText("[ ]");
+            ArrayLabel.setText(" ");
 
         cants.setBackground(new java.awt.Color(232, 161, 155));
         cants.setForeground(new java.awt.Color(232, 161, 155));
