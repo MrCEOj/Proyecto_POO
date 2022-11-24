@@ -8,12 +8,13 @@ public class Cinco extends javax.swing.JPanel {
 
    
     @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Content = new javax.swing.JPanel();
         Placeholder = new java.awt.Label();
 
-        Content.setPreferredSize(new java.awt.Dimension(640, 490));
+        Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
         Placeholder.setText("Opcion 5");
 
@@ -48,7 +49,7 @@ public class Cinco extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>                        
+    }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

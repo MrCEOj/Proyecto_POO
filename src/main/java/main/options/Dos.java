@@ -3,7 +3,7 @@ package main.options;
 public class Dos extends javax.swing.JPanel {
 
     /**
-     * Creates new form Uno
+     * Creates new form Dos
      */
     public Dos() {
         initComponents();
@@ -21,9 +21,9 @@ public class Dos extends javax.swing.JPanel {
         Content = new javax.swing.JPanel();
         Placeholder = new java.awt.Label();
 
-        setPreferredSize(new java.awt.Dimension(640, 490));
+        setPreferredSize(new java.awt.Dimension(640, 520));
 
-        Content.setPreferredSize(new java.awt.Dimension(640, 490));
+        Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
         Placeholder.setText("Opcion 2");
 
