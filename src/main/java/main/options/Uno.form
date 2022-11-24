@@ -164,6 +164,9 @@
               <Connection code="&quot;[ ]&quot;" type="code"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel()"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JComboBox" name="cants">
           <Properties>

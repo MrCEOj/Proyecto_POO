@@ -1,11 +1,14 @@
 package main.options;
 
 import java.math.*;
+import javax.swing.JLabel;
 
 public class Uno extends javax.swing.JPanel {
     public Uno() {
         initComponents();
     }
+    
+    public int num[];
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -114,7 +117,7 @@ public class Uno extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Integer cant = (Integer)cants.getSelectedItem();
-        int num[] = new int[cant];
+        this.num = new int[cant];
         String n = "[";
         Double temp;
         for(int i=0 ; i<cant ; i++){
@@ -123,7 +126,9 @@ public class Uno extends javax.swing.JPanel {
             n+=num[i]+", ";
         }
         n+="]";
+        
         ArrayLabel.setText(n);
+        ArrayLabel.setHorizontalAlignment(JLabel.CENTER);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
