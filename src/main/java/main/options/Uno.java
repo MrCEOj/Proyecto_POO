@@ -4,13 +4,13 @@ import javax.swing.JLabel;
 
 public class Uno extends javax.swing.JPanel {
     public static int num[];
-    private static Integer cant = 0;
+    public static Integer cant = 0;
     public Uno() {
         initComponents();
     }
     
     
-    private String getar(){
+    public static String getar(){
         String s="[";
         if(num.length > 0)
             for(int i=0 ; i<num.length ; i++)

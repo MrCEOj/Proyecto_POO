@@ -5,6 +5,8 @@ import javax.swing.*;
 
 public class Seis extends javax.swing.JPanel {
 
+    Uno b = new Uno();
+
     public Seis() {
         initComponents();
     }
@@ -29,6 +31,7 @@ public class Seis extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        ArrayLabel = new javax.swing.JLabel();
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
@@ -72,6 +75,15 @@ public class Seis extends javax.swing.JPanel {
             }
         });
 
+        ArrayLabel.setBackground(new java.awt.Color(0, 0, 0));
+        ArrayLabel.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
+        ArrayLabel.setForeground(new java.awt.Color(0, 0, 0));
+        if(Uno.cant > 0)
+            ArrayLabel.setText(Uno.getar());
+        else
+            ArrayLabel.setText("[ ]");
+        
+
         javax.swing.GroupLayout ContentLayout = new javax.swing.GroupLayout(Content);
         Content.setLayout(ContentLayout);
         ContentLayout.setHorizontalGroup(
@@ -92,7 +104,10 @@ public class Seis extends javax.swing.JPanel {
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ContentLayout.createSequentialGroup()
                         .addGap(206, 206, 206)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ContentLayout.createSequentialGroup()
+                        .addGap(260, 260, 260)
+                        .addComponent(ArrayLabel)))
                 .addContainerGap(105, Short.MAX_VALUE))
         );
         ContentLayout.setVerticalGroup(
@@ -108,7 +123,9 @@ public class Seis extends javax.swing.JPanel {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addGap(69, 69, 69)
+                .addComponent(ArrayLabel)
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -128,7 +145,17 @@ public class Seis extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        int aux;
+        for(int x=1; x<Uno.cant; x++){
+            for(int y=0; y<Uno.cant-1; y++){
+                if(Uno.num[y] > Uno.num[y+1]){
+                    aux=Uno.num[y];
+                    Uno.num[y]=Uno.num[y+1];
+                    Uno.num[y+1]=aux;
+                }
+            }
+        }
+        ArrayLabel.setText(Uno.getar());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -142,6 +169,7 @@ public class Seis extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ArrayLabel;
     private javax.swing.JPanel Content;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
