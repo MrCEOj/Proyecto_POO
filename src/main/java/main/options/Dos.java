@@ -31,7 +31,7 @@ public class Dos extends javax.swing.JPanel {
         ArrayLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         Sig = new javax.swing.JButton();
-        formatted = new javax.swing.JFormattedTextField(new Integer(3));
+        formatted = new javax.swing.JFormattedTextField(new Integer(0));
 
         setPreferredSize(new java.awt.Dimension(640, 490));
 
@@ -68,10 +68,7 @@ public class Dos extends javax.swing.JPanel {
         ArrayLabel.setBackground(new java.awt.Color(0, 0, 0));
         ArrayLabel.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         ArrayLabel.setForeground(new java.awt.Color(0, 0, 0));
-        if(Uno.cant > 0)
-            ArrayLabel.setText(Uno.getar());
-        else
-            ArrayLabel.setText(" ");
+        ArrayLabel.setText(Uno.getar());
 
         jLabel5.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
