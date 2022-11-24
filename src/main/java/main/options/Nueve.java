@@ -27,13 +27,19 @@ public class Nueve extends javax.swing.JPanel {
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("LEER CONTENIDO");
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("DEL ARCHIVO");
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Seleccione el archivo a mostrar");
 
         jButton1.setBackground(new java.awt.Color(171, 86, 80));
@@ -141,7 +147,20 @@ public class Nueve extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+        String ruta = "./src/main/java/main/options\\respaldo_str.txt";
+        try{
+            FileReader fr = new FileReader(ruta);
+            BufferedReader br = new BufferedReader(fr);
+            String texto="";
+            String linea="";
+            while(((linea=br.readLine())!=null)){
+                texto+=linea + "\n";
+            }
+            txaArchivo.setText(texto);
+            JOptionPane.showMessageDialog(null, "Archivo leido correctamente");
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Excepcion " + e);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

@@ -4,8 +4,6 @@ import javax.swing.JOptionPane;
 
 public class Ocho extends javax.swing.JPanel {
     
-    Uno b = new Uno();
-
     public Ocho() {
         initComponents();
     }
@@ -26,13 +24,19 @@ public class Ocho extends javax.swing.JPanel {
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("ESCRIBIR CONTENIDO DE");
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("ARREGLO EN ARCHIVO");
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Seleccione el arreglo a respaldar");
 
         jButton1.setBackground(new java.awt.Color(171, 86, 80));
@@ -127,7 +131,7 @@ public class Ocho extends javax.swing.JPanel {
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(contenido);
             bw.close();
-            JOptionPane.showMessageDialog(null, "Archivo creado exitosamente");
+            JOptionPane.showMessageDialog(null, "Archivo escrito exitosamente");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Excepcion " + e);
         }
@@ -135,7 +139,22 @@ public class Ocho extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        try {
+            String ruta = "./src/main/java/main/options\\respaldo_str.txt";
+            String contenido = Tres.getstar() + "\n";
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+            JOptionPane.showMessageDialog(null, "Archivo escrito exitosamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Excepcion " + e);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
