@@ -1,6 +1,9 @@
 package main.options;
 
+import java.awt.Dimension;
+import java.awt.Point;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class Uno extends javax.swing.JPanel {
     public static int num[];
@@ -30,8 +33,8 @@ public class Uno extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Title = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         ArrayLabel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         cants = new javax.swing.JComboBox<>();
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
@@ -53,6 +56,16 @@ public class Uno extends javax.swing.JPanel {
         Title.setForeground(new java.awt.Color(0, 0, 0));
         Title.setText("ARREGLO ALEATORIO");
 
+        ArrayLabel.setBackground(new java.awt.Color(0, 0, 0));
+        ArrayLabel.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
+        ArrayLabel.setForeground(new java.awt.Color(0, 0, 0));
+        ArrayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        if(cant > 0)
+        ArrayLabel.setText(getar());
+        else
+        ArrayLabel.setText("[ ]");
+        ArrayLabel.setPreferredSize(new java.awt.Dimension(640, 22));
+
         jButton1.setBackground(new java.awt.Color(171, 86, 80));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(23, 18, 18));
@@ -62,14 +75,6 @@ public class Uno extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        ArrayLabel.setBackground(new java.awt.Color(0, 0, 0));
-        ArrayLabel.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
-        ArrayLabel.setForeground(new java.awt.Color(0, 0, 0));
-        if(cant > 0)
-            ArrayLabel.setText(getar());
-        else
-            ArrayLabel.setText(" ");
 
         cants.setBackground(new java.awt.Color(232, 161, 155));
         cants.setForeground(new java.awt.Color(232, 161, 155));
@@ -91,14 +96,13 @@ public class Uno extends javax.swing.JPanel {
                         .addComponent(cants, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ContentLayout.createSequentialGroup()
                         .addGap(259, 259, 259)
-                        .addGroup(ContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ArrayLabel)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(146, Short.MAX_VALUE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContentLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(99, 99, 99))
+            .addComponent(ArrayLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         ContentLayout.setVerticalGroup(
             ContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,9 +117,9 @@ public class Uno extends javax.swing.JPanel {
                     .addComponent(cants, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
-                .addComponent(ArrayLabel)
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addGap(92, 92, 92)
+                .addComponent(ArrayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(230, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -143,7 +147,6 @@ public class Uno extends javax.swing.JPanel {
             num[i] = temp.intValue();
         }
         ArrayLabel.setText(getar());
-        ArrayLabel.setHorizontalAlignment(JLabel.CENTER);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
