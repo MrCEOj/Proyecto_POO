@@ -1,5 +1,6 @@
 package main.options;
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 import main.options.*;
 import javax.swing.*;
 
@@ -155,7 +156,9 @@ public class Seis extends javax.swing.JPanel {
                 }
             }
         }
+        
         ArrayLabel.setText(Uno.getar());
+        JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
