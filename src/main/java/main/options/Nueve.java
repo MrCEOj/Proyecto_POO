@@ -1,5 +1,7 @@
 package main.options;
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
+import java.io.*;
 import main.options.*;
 import javax.swing.*;
 
@@ -7,16 +9,6 @@ public class Nueve extends javax.swing.JPanel {
 
     public Nueve() {
         initComponents();
-    }
-
-    private void show(JPanel u){
-        u.setSize(640,520);
-        u.setLocation(0,0);
-        
-        Content.removeAll();
-        Content.add(u,BorderLayout.CENTER);
-        Content.revalidate();
-        Content.repaint();
     }
    
     @SuppressWarnings("unchecked")
@@ -29,6 +21,8 @@ public class Nueve extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txaArchivo = new javax.swing.JTextArea();
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
@@ -64,6 +58,10 @@ public class Nueve extends javax.swing.JPanel {
             }
         });
 
+        txaArchivo.setColumns(20);
+        txaArchivo.setRows(5);
+        jScrollPane1.setViewportView(txaArchivo);
+
         javax.swing.GroupLayout ContentLayout = new javax.swing.GroupLayout(Content);
         Content.setLayout(ContentLayout);
         ContentLayout.setHorizontalGroup(
@@ -78,15 +76,18 @@ public class Nueve extends javax.swing.JPanel {
                                 .addGap(36, 36, 36)
                                 .addComponent(jLabel2))))
                     .addGroup(ContentLayout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jLabel3))
-                    .addGroup(ContentLayout.createSequentialGroup()
                         .addGap(206, 206, 206)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ContentLayout.createSequentialGroup()
                         .addGap(206, 206, 206)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ContentLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jLabel3))
+                    .addGroup(ContentLayout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
         ContentLayout.setVerticalGroup(
             ContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,7 +102,9 @@ public class Nueve extends javax.swing.JPanel {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -121,13 +124,24 @@ public class Nueve extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        NueveDos p = new NueveDos();
-        show(p);
+        String ruta = "./src/main/java/main/options\\respaldo_num.txt";
+        try{
+            FileReader fr = new FileReader(ruta);
+            BufferedReader br = new BufferedReader(fr);
+            String texto="";
+            String linea="";
+            while(((linea=br.readLine())!=null)){
+                texto+=linea + "\n";
+            }
+            txaArchivo.setText(texto);
+            JOptionPane.showMessageDialog(null, "Archivo leido correctamente");
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Excepcion " + e);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        NueveTres p = new NueveTres();
-        show(p);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
@@ -138,5 +152,7 @@ public class Nueve extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txaArchivo;
     // End of variables declaration//GEN-END:variables
 }
