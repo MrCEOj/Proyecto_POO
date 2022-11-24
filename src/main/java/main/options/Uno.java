@@ -13,7 +13,7 @@ public class Uno extends javax.swing.JPanel {
     public static String getar(){
         String s="[";
         if(num.length > 0)
-            for(int i=0 ; i<num.length ; i++)
+            for(int i=0 ; i<num.length; i++)
                 s+=num[i]+", ";
         s+="]";
         return s;

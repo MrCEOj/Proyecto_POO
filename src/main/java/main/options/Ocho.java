@@ -117,7 +117,7 @@ public class Ocho extends javax.swing.JPanel {
         
         try {
             String ruta = "./src/main/java/main/options\\respaldo_num.txt";
-            String contenido = Uno.getar();
+            String contenido = Uno.getar() + "\n";
             File file = new File(ruta);
             // Si el archivo no existe es creado
             if (!file.exists()) {
