@@ -1,5 +1,7 @@
 package main.options;
 
+import java.awt.BorderLayout;
+
 public class SeisDos extends javax.swing.JPanel {
 
     public SeisDos() {
@@ -17,10 +19,12 @@ public class SeisDos extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(640, 520));
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
+        Content.setForeground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -77,6 +81,17 @@ public class SeisDos extends javax.swing.JPanel {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(171, 86, 80));
+        jButton4.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(23, 18, 18));
+        jButton4.setText("←");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ContentLayout = new javax.swing.GroupLayout(Content);
         Content.setLayout(ContentLayout);
         ContentLayout.setHorizontalGroup(
@@ -93,6 +108,10 @@ public class SeisDos extends javax.swing.JPanel {
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContentLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
         ContentLayout.setVerticalGroup(
             ContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +127,9 @@ public class SeisDos extends javax.swing.JPanel {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -169,12 +190,24 @@ public class SeisDos extends javax.swing.JPanel {
         Cinco.panelob("Arreglo Ordenado");
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Seis u = new Seis();
+        u.setSize(640,520);
+        u.setLocation(0,0);
+        
+        Content.removeAll();
+        Content.add(u,BorderLayout.CENTER);
+        Content.revalidate();
+        Content.repaint();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Content;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

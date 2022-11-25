@@ -52,6 +52,7 @@ public class MenuPrincipal extends javax.swing.JFrame{
         Bienvenida = new javax.swing.JLabel();
         Title = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Proyecto de POO");
@@ -531,16 +532,34 @@ public class MenuPrincipal extends javax.swing.JFrame{
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(171, 86, 80));
+        jButton4.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(23, 18, 18));
+        jButton4.setText("🏠");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout TitleLayout = new javax.swing.GroupLayout(Title);
         Title.setLayout(TitleLayout);
         TitleLayout.setHorizontalGroup(
             TitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
+            .addGroup(TitleLayout.createSequentialGroup()
+                .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 929, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4))
         );
         TitleLayout.setVerticalGroup(
             TitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TitleLayout.createSequentialGroup()
-                .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TitleLayout.createSequentialGroup()
+                .addGroup(TitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(TitleLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton4))
+                    .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -699,6 +718,11 @@ public class MenuPrincipal extends javax.swing.JFrame{
     private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
         Op10.setBackground(new java.awt.Color(148,25,25));
     }//GEN-LAST:event_jLabel12MouseExited
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Cero p = new Cero();
+        show(p);
+    }//GEN-LAST:event_jButton4ActionPerformed
       /**
      * @param args the command line arguments
      */
@@ -751,6 +775,7 @@ public class MenuPrincipal extends javax.swing.JFrame{
     private javax.swing.JPanel Opciones;
     private javax.swing.JPanel Title;
     private javax.swing.JLabel Titulo;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

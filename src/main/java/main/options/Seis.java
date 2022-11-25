@@ -169,40 +169,48 @@ public class Seis extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int aux;
-        for(int x=1; x<Uno.cant; x++){
-            for(int y=0; y<Uno.cant-1; y++){
-                if(Uno.num[y] > Uno.num[y+1]){
-                    aux=Uno.num[y];
-                    Uno.num[y]=Uno.num[y+1];
-                    Uno.num[y+1]=aux;
+        if(Uno.cant > 0){
+            int aux;
+            for(int x=1; x<Uno.cant; x++){
+                for(int y=0; y<Uno.cant-1; y++){
+                    if(Uno.num[y] > Uno.num[y+1]){
+                        aux=Uno.num[y];
+                        Uno.num[y]=Uno.num[y+1];
+                        Uno.num[y+1]=aux;
+                    }
                 }
             }
-        }
-        
-        ArrayLabel.setText(Uno.getar());
-        JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
+            ArrayLabel.setText(Uno.getar());
+            JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
+        }else
+             JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String aux;
-        for(int x=1; x<Tres.cant; x++){
-            for(int y=0; y<Tres.cant-1; y++){
-                if(Tres.str[y].compareTo(Tres.str[y+1]) > 0){
-                    aux=Tres.str[y];
-                    Tres.str[y]=Tres.str[y+1];
-                    Tres.str[y+1]=aux;
+        if(Tres.cant > 0){
+            String aux;
+            for(int x=1; x<Tres.cant; x++){
+                for(int y=0; y<Tres.cant-1; y++){
+                    if(Tres.str[y].compareTo(Tres.str[y+1]) > 0){
+                        aux=Tres.str[y];
+                        Tres.str[y]=Tres.str[y+1];
+                        Tres.str[y+1]=aux;
+                    }
                 }
             }
-        }
-        
-        ArrayLabel2.setText(Tres.getstar());
-        JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
+            
+            ArrayLabel2.setText(Tres.getstar());
+            JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
+        }else
+            JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        SeisDos p = new SeisDos();
-        show(p);
+        if(Cuatro.cant > 0){
+            SeisDos p = new SeisDos();
+            show(p);
+        }else
+            JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
