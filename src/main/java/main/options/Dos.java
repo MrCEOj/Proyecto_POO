@@ -185,6 +185,7 @@ public class Dos extends javax.swing.JPanel {
 
     private void SigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigActionPerformed
         Uno.num[i] = Integer.parseInt(formatted.getText());
+        formatted.setText("");
         textoArray.setText("Ingrese el número #"+(i+2)+": ");
         if(i==Uno.cant-2)
             Sig.setText("Finalizar");

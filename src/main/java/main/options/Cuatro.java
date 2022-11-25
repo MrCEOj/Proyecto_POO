@@ -239,6 +239,9 @@ public class Cuatro extends javax.swing.JPanel {
             sig.setBorderPainted(false);
             JOptionPane.showMessageDialog(null,"¡El array está lleno!");
         }
+        nom.setText("");
+        age.setText("");
+        heigth.setText("");
         if(i<cant-1)
             i++;
         Registro.setText("Registro #"+(i+1));

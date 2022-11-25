@@ -201,6 +201,7 @@ public class Tres extends javax.swing.JPanel {
         i++;
         ArrayLabel.setText(getstar());
         ArrayLabel.setHorizontalAlignment(JLabel.CENTER);
+        TextField.setText("");
     }//GEN-LAST:event_SigActionPerformed
 
 
