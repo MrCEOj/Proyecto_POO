@@ -128,15 +128,45 @@ public class SeisDos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Persona aux;
+        for(int x=1; x<Cuatro.cant; x++){
+            for(int y=0; y<Cuatro.cant-1; y++){
+                if(Cuatro.per[y].nome.compareTo(Cuatro.per[y+1].nome) > 0){
+                    aux=Cuatro.per[y];
+                    Cuatro.per[y]=Cuatro.per[y+1];
+                    Cuatro.per[y+1]=aux;
+                }
+            }
+        }
+        Cinco.panelob("Arreglo Ordenado");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        Persona aux;
+        for(int x=1; x<Cuatro.cant; x++){
+            for(int y=0; y<Cuatro.cant-1; y++){
+                if(Cuatro.per[y].edad > Cuatro.per[y+1].edad){
+                    aux=Cuatro.per[y];
+                    Cuatro.per[y]=Cuatro.per[y+1];
+                    Cuatro.per[y+1]=aux;
+                }
+            }
+        }
+        Cinco.panelob("Arreglo Ordenado");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        Persona aux;
+        for(int x=1; x<Cuatro.cant; x++){
+            for(int y=0; y<Cuatro.cant-1; y++){
+                if(Cuatro.per[y].altura > Cuatro.per[y+1].altura){
+                    aux=Cuatro.per[y];
+                    Cuatro.per[y]=Cuatro.per[y+1];
+                    Cuatro.per[y+1]=aux;
+                }
+            }
+        }
+        Cinco.panelob("Arreglo Ordenado");
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

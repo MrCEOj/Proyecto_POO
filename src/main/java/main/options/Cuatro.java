@@ -206,7 +206,11 @@ public class Cuatro extends javax.swing.JPanel {
         cant = (Integer)cants.getSelectedItem();
         per = new Persona[cant];
         i = 0;
-        Registro.setText("Registro #1");
+        Registro.setText("Registro #"+(i+1));
+        sig.setText("Siguiente");
+        sig.setOpaque(true);
+        sig.setContentAreaFilled(true);
+        sig.setBorderPainted(true);
     }//GEN-LAST:event_But1ActionPerformed
 
     private void nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomActionPerformed
@@ -223,7 +227,6 @@ public class Cuatro extends javax.swing.JPanel {
 
     private void sigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sigActionPerformed
         String no = nom.getText();
-        Registro.setText("Registro #"+(i+2));
         int edad = Integer.parseInt(age.getText());
         double h = Double.parseDouble(heigth.getText());
         per[i] = new Persona(no,edad,h);
@@ -236,8 +239,9 @@ public class Cuatro extends javax.swing.JPanel {
             sig.setBorderPainted(false);
             JOptionPane.showMessageDialog(null,"¡El array está lleno!");
         }
-        i++;
-        
+        if(i<cant-1)
+            i++;
+        Registro.setText("Registro #"+(i+1));
         
         
             
