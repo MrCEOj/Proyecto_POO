@@ -4,16 +4,45 @@ import main.options.*;
 import javax.swing.*;
 public class MenuPrincipal extends javax.swing.JFrame{
     
-    int xMouse, yMouse; //Variables que captan coordenadas del puntero
+    //Declaración de objetos swing
+    private javax.swing.JLabel Bienvenida;  //Texto de bienvenida
+    private javax.swing.JPanel Contenido;   //Panel que contiene el contenido de las opciones
+    private javax.swing.JPanel Fondo;       //Panel de fondo
+    private javax.swing.JPanel Op1;         //Panel que contiene funge como botón para la opción 1
+    private javax.swing.JPanel Op2;         // ""    ""    ""     ""    ""    ""   ""  "" opción 2
+    private javax.swing.JPanel Op3;         // ""    ""    ""     ""    ""    ""   ""  "" opción 3
+    private javax.swing.JPanel Op4;         // ""    ""    ""     ""    ""    ""   ""  "" opción 4
+    private javax.swing.JPanel Op5;         // ""    ""    ""     ""    ""    ""   ""  "" opción 5
+    private javax.swing.JPanel Op6;         // ""    ""    ""     ""    ""    ""   ""  "" opción 6
+    private javax.swing.JPanel Op7;         // ""    ""    ""     ""    ""    ""   ""  "" opción 7
+    private javax.swing.JPanel Op8;         // ""    ""    ""     ""    ""    ""   ""  "" opción 8
+    private javax.swing.JPanel Op9;         // ""    ""    ""     ""    ""    ""   ""  "" opción 9
+    private javax.swing.JPanel Op10;        // ""    ""    ""     ""    ""    ""   ""  "" opción 10
+    private javax.swing.JPanel Opciones;    //Panel que contiene todas las opciones como botones
+    private javax.swing.JPanel Title;       //Panel de cabecera
+    private javax.swing.JLabel Titulo;      //Etiqueta de título
+    private javax.swing.JLabel jLabel1;     //Etiqueta de la opción 1
+    private javax.swing.JLabel jLabel10;    //   ""     ""   opción 2
+    private javax.swing.JLabel jLabel11;    //   ""     ""   opción 3
+    private javax.swing.JLabel jLabel12;    //   ""     ""   opción 4
+    private javax.swing.JLabel jLabel4;     //   ""     ""   opción 5
+    private javax.swing.JLabel jLabel5;     //   ""     ""   opción 6
+    private javax.swing.JLabel jLabel6;     //   ""     ""   opción 7
+    private javax.swing.JLabel jLabel7;     //   ""     ""   opción 8
+    private javax.swing.JLabel jLabel8;     //   ""     ""   opción 9
+    private javax.swing.JLabel jLabel9;     //   ""     ""   opción 10
+    private javax.swing.JButton jButton4;   //Botón de Home
+
+    int xMouse, yMouse; //Variables que guardan coordenadas del puntero
     
     public MenuPrincipal() {
-        super("Proyecto de POO");
-        initComponents(); //El constructor inicializa las variables de swing y les aplica atributos
-        Cero p = new Cero();
+        super("Los POOderosos RadaMarceDiego"); //Título
+        initComponents();         //El constructor inicializa las variables de swing y les aplica atributos
+        Cero p = new Cero();      //Inicializar el panel de bienvenida
         show(p);
     }
     
-    private void show(JPanel u){
+    private void show(JPanel u){  //Método que permite actualizar el panel de contenido de las opciones
         u.setSize(640,520);
         u.setLocation(0,0);
         
@@ -23,42 +52,45 @@ public class MenuPrincipal extends javax.swing.JFrame{
         Contenido.repaint();
     }
 
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    //Método que inicializa componentes
     private void initComponents() {
 
-        Fondo = new javax.swing.JPanel();
+        Fondo = new javax.swing.JPanel();       //Inicializar los objetos de swing
         Opciones = new javax.swing.JPanel();
-        Op1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Op2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        Op3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        Op4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        Op5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        Op6 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        Op7 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        Op8 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        Op9 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        Op10 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
+        Op1 = new javax.swing.JPanel();
+        Op2 = new javax.swing.JPanel();
+        Op3 = new javax.swing.JPanel();
+        Op4 = new javax.swing.JPanel();
+        Op5 = new javax.swing.JPanel();
+        Op6 = new javax.swing.JPanel();
+        Op7 = new javax.swing.JPanel();
+        Op8 = new javax.swing.JPanel();
+        Op9 = new javax.swing.JPanel();
+        Op10 = new javax.swing.JPanel();
         Contenido = new javax.swing.JPanel();
         Bienvenida = new javax.swing.JLabel();
         Title = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Proyecto de POO");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE); //Inicializar Ventana
+        setTitle("Los POOderosos RadaMarceDiego");
         setLocationByPlatform(true);
         setResizable(false);
 
+        /*
+         *  Inicia el diseño de interfaz
+         */
         Fondo.setBackground(new java.awt.Color(204, 204, 204));
         Fondo.setMinimumSize(new java.awt.Dimension(0, 0));
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -577,162 +609,161 @@ public class MenuPrincipal extends javax.swing.JFrame{
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        /*
+         *  Finaliza el diseño de interfaz
+         */
+    }
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) { //Eventos que detectan el clic de las opciones
         Uno p = new Uno();
         show(p);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {
         Dos p = new Dos();
         show(p);
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
         Tres p = new Tres();
         show(p);
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {
         Cuatro p = new Cuatro();
         show(p);
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }
 
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {
         Cinco p = new Cinco();
         show(p);
-    }//GEN-LAST:event_jLabel7MouseClicked
+    }
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {
         Seis p = new Seis();
         show(p);
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {
         Siete p = new Siete();
         show(p);
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }
 
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {
         Ocho p = new Ocho();
         show(p);
-    }//GEN-LAST:event_jLabel10MouseClicked
+    }
     
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {
         Nueve p = new Nueve();
         show(p);
-    }//GEN-LAST:event_jLabel11MouseClicked
+    }
 
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {
         System.exit(0);
-    }//GEN-LAST:event_jLabel12MouseClicked
+    }
 
-    private void TituloMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TituloMousePressed
+    private void TituloMousePressed(java.awt.event.MouseEvent evt) { //Evento que detecta cuando se presiona la barra de título
         xMouse = evt.getX();
         yMouse = evt.getY();
-    }//GEN-LAST:event_TituloMousePressed
+    }
 
-    private void TituloMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TituloMouseDragged
+    //Evento que permmite mover la ventana con la barra de título
+    private void TituloMouseDragged(java.awt.event.MouseEvent evt) {
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
         this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_TituloMouseDragged
+    }
 
-    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+    //Eventos cambian el color del panel de las opciones cuando el puntero les pasa por encima
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {
         Op1.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel1MouseEntered
+    }
 
-    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {
         Op1.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel1MouseExited
+    }
 
-    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {
         Op2.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel4MouseEntered
+    }
 
-    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {
         Op2.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel4MouseExited
+    }
 
-    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
+    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {
        Op3.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel5MouseEntered
+    }
 
-    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
+    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {
         Op3.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel5MouseExited
+    }
 
-    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
+    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {
         Op4.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel6MouseEntered
+    }
 
-    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
+    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {
         Op4.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel6MouseExited
+    }
 
-    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {
         Op5.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel7MouseExited
+    }
 
-    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
+    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {
         Op5.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel7MouseEntered
+    }
 
-    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
+    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {
         Op6.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel8MouseExited
+    }
 
-    private void jLabel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseEntered
+    private void jLabel8MouseEntered(java.awt.event.MouseEvent evt) {
         Op6.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel8MouseEntered
+    }
 
-    private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseEntered
+    private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {
         Op7.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel9MouseEntered
+    }
 
-    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
+    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {
         Op7.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel9MouseExited
+    }
 
-    private void jLabel10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseEntered
+    private void jLabel10MouseEntered(java.awt.event.MouseEvent evt) {
         Op8.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel10MouseEntered
+    }
 
-    private void jLabel10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseExited
+    private void jLabel10MouseExited(java.awt.event.MouseEvent evt) {
         Op8.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel10MouseExited
+    }
 
-    private void jLabel11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseEntered
+    private void jLabel11MouseEntered(java.awt.event.MouseEvent evt) {
         Op9.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel11MouseEntered
+    }
 
-    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
+    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {
         Op9.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel11MouseExited
+    }
 
-    private void jLabel12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseEntered
+    private void jLabel12MouseEntered(java.awt.event.MouseEvent evt) {
         Op10.setBackground(new java.awt.Color(204, 63, 63));
-    }//GEN-LAST:event_jLabel12MouseEntered
+    }
 
-    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
+    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {
         Op10.setBackground(new java.awt.Color(148,25,25));
-    }//GEN-LAST:event_jLabel12MouseExited
+    }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         Cero p = new Cero();
         show(p);
-    }//GEN-LAST:event_jButton4ActionPerformed
-      /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
+    }
+      
+    public static void main(String args[]) { //El main
+                try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -748,9 +779,9 @@ public class MenuPrincipal extends javax.swing.JFrame{
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        
 
-        /* Create and display the form */
+        //Crea e imprime el jframe
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MenuPrincipal().setVisible(true);
@@ -758,33 +789,5 @@ public class MenuPrincipal extends javax.swing.JFrame{
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Bienvenida;
-    private javax.swing.JPanel Contenido;
-    private javax.swing.JPanel Fondo;
-    private javax.swing.JPanel Op1;
-    private javax.swing.JPanel Op10;
-    private javax.swing.JPanel Op2;
-    private javax.swing.JPanel Op3;
-    private javax.swing.JPanel Op4;
-    private javax.swing.JPanel Op5;
-    private javax.swing.JPanel Op6;
-    private javax.swing.JPanel Op7;
-    private javax.swing.JPanel Op8;
-    private javax.swing.JPanel Op9;
-    private javax.swing.JPanel Opciones;
-    private javax.swing.JPanel Title;
-    private javax.swing.JLabel Titulo;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    // End of variables declaration//GEN-END:variables
+    
 }

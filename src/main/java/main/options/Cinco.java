@@ -10,16 +10,29 @@ import javax.swing.JScrollPane;
 
 public class Cinco extends javax.swing.JPanel {
     
+    //Declaración de objetos swinf
+    private javax.swing.JPanel Content;     //Panel principal
+    private javax.swing.JButton jButton2;   //Botones de ordenación
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel2;     //Labels de diseño
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+
+    //Contador
     static int i;
+
     public Cinco() {
         initComponents();
     }
 
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
+    //inicializar componentes
     private void initComponents() {
 
+        //Inicializar objetos
         Content = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -28,6 +41,9 @@ public class Cinco extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
+        /*
+         * Diseño
+         */
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setForeground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
@@ -135,16 +151,21 @@ public class Cinco extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+        /*
+         * Diseño
+         */
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    //Muestra array de números o error
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         if(Uno.cant > 0)
             JOptionPane.showMessageDialog(null, "Contenido del arreglo: " + Uno.getar(),"Arreglo de números.",-1);
         else
             JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    //Muestra array de cadenas
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         JPanel pan = new JPanel();
         pan.add(new JLabel("Contenido del arreglo: "));
         pan.add(new JScrollPane(new JList(Tres.str)));
@@ -153,15 +174,17 @@ public class Cinco extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,pan,"Arreglo de cadenas.",-1,null);
         else
             JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    //Muestra array de objetos
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         if(Cuatro.cant > 0){
             panelob("Arreglo de objetos.");
         }else
             JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }
     
+    //Método que genera un modal para navegar por el array de objetos
     public static void panelob(String tit){
         i=0;
         JPanel pan = new JPanel();
@@ -225,13 +248,5 @@ public class Cinco extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null,pan,tit,-1,null);
     }
     
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Content;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    // End of variables declaration//GEN-END:variables
+    
 }

@@ -4,14 +4,26 @@ import java.awt.BorderLayout;
 
 public class SeisDos extends javax.swing.JPanel {
 
+    //Declaración de objetos swing
+    private javax.swing.JPanel Content;     //Panel principal
+    private javax.swing.JButton jButton1;   //Botones de funcion
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;     //Labels de diseño
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+
     public SeisDos() {
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
+    //Inicializar componentes
     private void initComponents() {
 
+        //Inicializar objetos swing
         Content = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -21,6 +33,9 @@ public class SeisDos extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
+        /*
+         * Diseño
+         */
         setPreferredSize(new java.awt.Dimension(640, 520));
 
         Content.setBackground(new java.awt.Color(255, 245, 245));
@@ -146,9 +161,13 @@ public class SeisDos extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+        /*
+         * Diseño
+         */
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    //Método que ordena el array de objetos por nombre
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         Persona aux;
         for(int x=1; x<Cuatro.cant; x++){
             for(int y=0; y<Cuatro.cant-1; y++){
@@ -160,9 +179,10 @@ public class SeisDos extends javax.swing.JPanel {
             }
         }
         Cinco.panelob("Arreglo Ordenado");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    //Método que ordena el array de objetos por edad
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         Persona aux;
         for(int x=1; x<Cuatro.cant; x++){
             for(int y=0; y<Cuatro.cant-1; y++){
@@ -174,9 +194,10 @@ public class SeisDos extends javax.swing.JPanel {
             }
         }
         Cinco.panelob("Arreglo Ordenado");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    //Método que ordena el array de objetos por estatura
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         Persona aux;
         for(int x=1; x<Cuatro.cant; x++){
             for(int y=0; y<Cuatro.cant-1; y++){
@@ -188,9 +209,10 @@ public class SeisDos extends javax.swing.JPanel {
             }
         }
         Cinco.panelob("Arreglo Ordenado");
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    //Método que permite regresar al menú anterior
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         Seis u = new Seis();
         u.setSize(640,520);
         u.setLocation(0,0);
@@ -199,17 +221,7 @@ public class SeisDos extends javax.swing.JPanel {
         Content.add(u,BorderLayout.CENTER);
         Content.revalidate();
         Content.repaint();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Content;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    // End of variables declaration//GEN-END:variables
 }

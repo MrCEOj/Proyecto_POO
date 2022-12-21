@@ -1,18 +1,28 @@
 package main.options;
 import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
-import main.options.*;
 import javax.swing.*;
 
 public class Seis extends javax.swing.JPanel {
 
-    Uno b = new Uno();
-    Tres d = new Tres();
+    //Declaración de objetos swing
+    private javax.swing.JLabel ArrayLabel;      //Label que contiene array de números
+    private javax.swing.JLabel ArrayLabel2;     //Label que contiene array de cadena
+    private javax.swing.JPanel Content;         //Panel principal
+    private javax.swing.JButton jButton1;       //Botones de funcion
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;         //Labels de diseño
+    private javax.swing.JLabel jLabel2;
+
+    Uno b = new Uno();      //Objeto del panel de la primera opción
+    Tres d = new Tres();    //Objeto del panel de la segunda opción
 
     public Seis() {
         initComponents();
     }
 
+    //Método para mostrar subopciones
     private void show(JPanel u){
         u.setSize(640,520);
         u.setLocation(0,0);
@@ -24,9 +34,11 @@ public class Seis extends javax.swing.JPanel {
     }
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
+    //Inicializar componentes
     private void initComponents() {
 
+        //Inicializar objetos swing
         Content = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -36,6 +48,9 @@ public class Seis extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
+        /*
+         * Diseño
+         */
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
@@ -166,9 +181,13 @@ public class Seis extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+        /*
+         * Diseño
+         */
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    //Método que ordena array de numeros
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         if(Uno.cant > 0){
             int aux;
             for(int x=1; x<Uno.cant; x++){
@@ -184,9 +203,10 @@ public class Seis extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
         }else
              JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    //Método que ordena array de cadena
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         if(Tres.cant > 0){
             String aux;
             for(int x=1; x<Tres.cant; x++){
@@ -203,25 +223,17 @@ public class Seis extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Arreglo ordenado correctamente");
         }else
             JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    //Método que muestra la subopción de objetos
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         if(Cuatro.cant > 0){
             SeisDos p = new SeisDos();
             show(p);
         }else
             JOptionPane.showMessageDialog(null, "El arreglo está vacío.","Error",0);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ArrayLabel;
-    private javax.swing.JLabel ArrayLabel2;
-    private javax.swing.JPanel Content;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    // End of variables declaration//GEN-END:variables
+    
 }

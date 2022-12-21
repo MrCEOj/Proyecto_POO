@@ -6,13 +6,24 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 public class Uno extends javax.swing.JPanel {
-    public static int num[];
-    public static Integer cant = 0;
+    
+    //Declaración de objetos swing
+    private javax.swing.JLabel ArrayLabel;  //Label que almacena el array terminado
+    private javax.swing.JPanel Content;     //Panel principal de la opción
+    private javax.swing.JLabel Title;       //Label de titulo
+    private javax.swing.JComboBox<Integer> cants;   //Lista de selección de items, usada para establecer tamaño del array
+    private javax.swing.JButton jButton1;   //Boton de confirmar
+    private javax.swing.JLabel jLabel1;     //Label de diseño
+    private javax.swing.JLabel jLabel3;     // ""     ""
+
+    public static int num[];      //Array principal
+    public static Integer cant = 0; //Variable que almacena cantidad
+
     public Uno() {
         initComponents();
     }
     
-    
+    // Función que traduce el array a String, los separa con una ','. Se utilizará en la opción 1 y 2
     public static String getar(){
         String s="[";
         if(num.length > 0)
@@ -26,9 +37,10 @@ public class Uno extends javax.swing.JPanel {
     }
     
     
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    //Inicializar componentes
     private void initComponents() {
 
+        //Inicializar objetos swing
         Content = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -37,6 +49,9 @@ public class Uno extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         cants = new javax.swing.JComboBox<>();
 
+        /*
+         * Diseño
+         */
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setForeground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
@@ -60,7 +75,7 @@ public class Uno extends javax.swing.JPanel {
         ArrayLabel.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         ArrayLabel.setForeground(new java.awt.Color(0, 0, 0));
         ArrayLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        if(cant > 0)
+        if(cant > 0)                            //Importante, detecta si el array está vacio antes de imprimir
         ArrayLabel.setText(getar());
         else
         ArrayLabel.setText("[ ]");
@@ -136,9 +151,13 @@ public class Uno extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+        /*
+         * Diseño
+         */
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    //Método que genera el array aleatorio en clic del boton
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         cant = (Integer)cants.getSelectedItem();
         num = new int[cant];
         Double temp;
@@ -147,15 +166,7 @@ public class Uno extends javax.swing.JPanel {
             num[i] = temp.intValue();
         }
         ArrayLabel.setText(getar());
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ArrayLabel;
-    private javax.swing.JPanel Content;
-    private javax.swing.JLabel Title;
-    private javax.swing.JComboBox<Integer> cants;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    // End of variables declaration//GEN-END:variables
+    
 }

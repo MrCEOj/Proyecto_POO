@@ -4,14 +4,26 @@ import javax.swing.JOptionPane;
 
 public class SieteDos extends javax.swing.JPanel {
     
+    //Declaración de objetos swing
+    private javax.swing.JPanel Content;     //Panel principal
+    private javax.swing.JButton jButton1;   //Botones de funcion
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;     //Labels de diseño
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField numeroBuscar; //Textfield con numero a buscar
+
     public SieteDos() {
         initComponents();
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
+    //Inicializar componentes
     private void initComponents() {
 
+        //Inicializar objetos swing
         Content = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -21,6 +33,9 @@ public class SieteDos extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
+        /*
+         * Diseño
+         */
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
@@ -138,9 +153,13 @@ public class SieteDos extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+        /*
+         * Diseño
+         */
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    //Boton para buscar
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         int numero, pos=-1;
         numero = Integer.parseInt(numeroBuscar.getText());
         for(int x=0; x<Uno.cant; x++){
@@ -151,9 +170,10 @@ public class SieteDos extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "No se encontro el numero");
         else
             JOptionPane.showMessageDialog(null, "La posicion del numero es " + pos);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    //Boton para regresar al menu anterior
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         Siete u = new Siete();
         u.setSize(640,520);
         u.setLocation(0,0);
@@ -162,17 +182,6 @@ public class SieteDos extends javax.swing.JPanel {
         Content.add(u,BorderLayout.CENTER);
         Content.revalidate();
         Content.repaint();
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Content;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField numeroBuscar;
-    // End of variables declaration//GEN-END:variables
+    }
+    
 }

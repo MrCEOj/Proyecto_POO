@@ -1,20 +1,29 @@
 package main.options;
-import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
 import java.io.*;
-import main.options.*;
-import javax.swing.*;
 
 public class Nueve extends javax.swing.JPanel {
+
+    // Declaración de objetos swing
+    private javax.swing.JPanel Content;     //Panel principal
+    private javax.swing.JButton jButton1;   //Botones de funcion
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;     //Labels de diseño
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;   //Panel con control deslizable
+    private javax.swing.JTextArea txaArchivo;       //Area donde se imprimirá el contenido de los archivos
 
     public Nueve() {
         initComponents();
     }
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
+    //Inicializar componentes
     private void initComponents() {
 
+        //Inicializar objetos swing
         Content = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -24,6 +33,9 @@ public class Nueve extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         txaArchivo = new javax.swing.JTextArea();
 
+        /*
+         * Diseño
+         */
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
 
@@ -127,9 +139,13 @@ public class Nueve extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+        /*
+         * Diseño
+         */
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    //Método que imprime en pantalla el contenido del archivo de números
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         String ruta = "./src/main/java/main/options\\respaldo_num.txt";
         try{
             FileReader fr = new FileReader(ruta);
@@ -144,9 +160,10 @@ public class Nueve extends javax.swing.JPanel {
         } catch(Exception e){
             JOptionPane.showMessageDialog(null, "Excepcion " + e);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    //Método que imprime en pantalla el contenido del archivo de números
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         String ruta = "./src/main/java/main/options\\respaldo_str.txt";
         try{
             FileReader fr = new FileReader(ruta);
@@ -161,17 +178,8 @@ public class Nueve extends javax.swing.JPanel {
         } catch(Exception e){
             JOptionPane.showMessageDialog(null, "Excepcion " + e);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Content;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txaArchivo;
-    // End of variables declaration//GEN-END:variables
+    
 }

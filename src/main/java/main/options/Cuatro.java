@@ -4,18 +4,38 @@ import javax.swing.JOptionPane;
 
 public class Cuatro extends javax.swing.JPanel {
     
-    public static Persona per[];
-    public static int cant;
-    int i;
+    // Declaración de objetos swing
+    private javax.swing.JPanel Content;     //Panel principal
+    private javax.swing.JLabel Registro;    //Label que indica el registro actual
+    private javax.swing.JTextField age;     //Textfield para el campo edad
+    private javax.swing.JTextField heigth;  //Textfield para el campo altura
+    private javax.swing.JTextField nom;     //Textfield para el campo nombre
+    private javax.swing.JComboBox<Integer> cants;   //Lista de elementos del array
+    private javax.swing.JLabel jLabel1;     //Label de diseño
+    private javax.swing.JLabel jLabel3;     // ""    ""
+    private javax.swing.JLabel jLabel4;     // ""    ""
+    private javax.swing.JLabel jLabel6;     // ""    ""
+    private javax.swing.JLabel jLabel7;     // ""    ""
+    private javax.swing.JLabel jLabel8;     // ""    ""
+    private javax.swing.JButton But1;       //Boton que inicializa array
+    private javax.swing.JButton sig;        //Botón de siguiente elemento
+
+
+    public static Persona per[];//Array de objetos
+    public static int cant;     //Cantidad de elementos
+    int i;                      //Contador de array
+
     public Cuatro() {
         initComponents();
     }
 
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
+    //Inicializar componentes
     private void initComponents() {
 
+        //Incializar objetos swing
         Content = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -31,6 +51,9 @@ public class Cuatro extends javax.swing.JPanel {
         heigth = new javax.swing.JTextField();
         sig = new javax.swing.JButton();
 
+        /*
+         * Diseño
+         */
         Content.setBackground(new java.awt.Color(255, 245, 245));
         Content.setForeground(new java.awt.Color(255, 245, 245));
         Content.setPreferredSize(new java.awt.Dimension(640, 520));
@@ -200,9 +223,13 @@ public class Cuatro extends javax.swing.JPanel {
                 .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
+        /*
+         * Diseño
+         */
+    }
 
-    private void But1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_But1ActionPerformed
+    //Método que inicializa array
+    private void But1ActionPerformed(java.awt.event.ActionEvent evt) {
         cant = (Integer)cants.getSelectedItem();
         per = new Persona[cant];
         i = 0;
@@ -211,21 +238,22 @@ public class Cuatro extends javax.swing.JPanel {
         sig.setOpaque(true);
         sig.setContentAreaFilled(true);
         sig.setBorderPainted(true);
-    }//GEN-LAST:event_But1ActionPerformed
+    }
 
-    private void nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomActionPerformed
+    private void nomActionPerformed(java.awt.event.ActionEvent evt) {
+    
+    }
 
-    private void ageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ageActionPerformed
-
-    private void heigthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heigthActionPerformed
+    private void ageActionPerformed(java.awt.event.ActionEvent evt) {
         
-    }//GEN-LAST:event_heigthActionPerformed
+    }
 
-    private void sigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sigActionPerformed
+    private void heigthActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+
+    //Método que registra datos al array
+    private void sigActionPerformed(java.awt.event.ActionEvent evt) {
         String no = nom.getText();
         int edad = Integer.parseInt(age.getText());
         double h = Double.parseDouble(heigth.getText());
@@ -246,25 +274,8 @@ public class Cuatro extends javax.swing.JPanel {
             i++;
         Registro.setText("Registro #"+(i+1));
         
-        
-            
-    }//GEN-LAST:event_sigActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton But1;
-    private javax.swing.JPanel Content;
-    private javax.swing.JLabel Registro;
-    private javax.swing.JTextField age;
-    private javax.swing.JComboBox<Integer> cants;
-    private javax.swing.JTextField heigth;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField nom;
-    private javax.swing.JButton sig;
-    // End of variables declaration//GEN-END:variables
+    
 }
